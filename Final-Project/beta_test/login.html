@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!--
+  File: login grocepi
+  William Vo, Umass Lowell Computer Science, william_vo@student.uml.edu
+  Copyright (c) 2017 by William Vo. All rights reserved. May be freelly
+      coppied or excerpted for educational purposes with credit to the author.
+  Updated by Will on March 21, 2018 at 8:50 AM
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login/SignUp</title>
+        <!-- Style sheet CSS -->
+        <link href="461f20173.css" type="text/css" rel="stylesheet">
+        <script src="_js/jquery.min.js"></script>
+        <script src="jquery_validate/jquery.validate.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#singup').validate({
+          rules: {
+            name='required',
+            userName: {
+              required: true,
+              userName: true
+            },
+            passWord: {
+              required: true,
+              number: true,
+              range: [0,9]
+            }
+
+          }, // end rules
+          messages: {
+            userName: {
+              required: "Enter valid name.",
+
+            },
+            passWord: {
+              required: "Enter valid number.",
+              number: "This is not valid value!",
+              range: "Range in [0, 9]"
+            }
+
+          } // end messages
+
+        }); // end validate
+        $('[title]').tooltip();
+      }); //end ready()
+    </script>
+    </head>
+
+    <body>
+        <header>
+          <nav class="clear">
+            <ul>
+              <li><a href="grocipeMain.html">Profile</a></li>
+              <li><a href="listRecipeTool_final.html">Recipe Finder</a></li>
+              <li><a href="grocMaketPlace.html">Market Place</a></li>
+
+            </ul>
+          </nav>
+          <h1>Login/SignUp</h1>
+        </header>
+
+
+
+        <!-- main content goes here -->
+            <article class ="main">
+              <h2>Grocipe<h2>
+              <!-- I use image to make my Demo wedside -->
+              <img src="Car-Coins-512.png" alt="Car-Coin" width="250" height="100">
+
+              <!--  -->
+              <div id="signup">
+                <label for="userName" class="userName">Username:</label>
+                <input type="text" id="userName" name ="userName" size="30"
+                  title="Enter your username or ID" onchange="login();">
+                  <br>
+            <!-- -->
+                <label for="passWord" class="passWord">Password:</label>
+                <input type="text" id="passWord" name ="passWord" size="30"
+                   title="Enter your Password." onchange="login();">
+              </div>
+              <br>
+              <h5><a href="signUp.html">Sign up here if you are new</a></h5>
+
+              <br>
+              <br>
+<!--
+              <input type="button" name="button" value="Log in" title="Click this botton!"
+              onclick="llistRecipeTool_final.htmlogin();">
+            -->
+              <button onclick="window.location.href='listRecipeTool_final.html'">Log In</button>
+            </article>
+
+    <!-- footer goes here -->
+      <script>
+
+
+     </script>
+
+        <footer>
+
+
+        </footer>
+    </body>
+</html>
