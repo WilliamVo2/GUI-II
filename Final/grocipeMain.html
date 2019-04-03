@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<!--
+  File:grocipeMain.html
+  4620 Assignment
+  William Vo, Umass Lowell Computer Science, william_vo@student.uml.edu
+  Copyright (c) 2018 by William Vo. All rights reserved. May be freelly
+      coppied or excerpted for educational purposes with credit to the author.
+  Updated by Will on March 24, 2018 at 8:50 AM
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>GrocipeMain</title>
+        <!-- Style sheet CSS -->
+        <link href="461f20173.css" type="text/css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="_js/final.js"></script>
+
+    </head>
+
+    <body>
+        <header>
+          <nav class="clear">
+            <ul>
+              <li><a href="grocipeMain.html">Profile</a></li>
+              <li><a href="listRecipeTool_final.html">Recipe Finder</a></li>
+              <li><a href="grocMaketPlace.html">Market Place</a></li>
+              <li><a href="login.html">Log In</a></li>
+              <li><a href="signUp.html">Sign Up</a></li>
+            </ul>
+          </nav>
+          <h1>GrocipeMain</h1>
+        </header>
+        <!-- fist sidebar goes here -->
+            <aside class="sidebar1">
+              <div class="profile" id="profile">
+                <table class="myProfile" id="myProfile">
+                    <tr>
+                        <th colspan="2">My Profile</th>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td id="edit1"></td>
+                    </tr>
+                    <tr>
+                        <td>Age:</td>
+                        <td id="edit2"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone number:</td>
+                        <td id="edit3"></td>
+                    </tr>
+                    <tr>
+                        <td>Location:</td>
+                        <td id="edit4"></td>
+                    </tr>
+                    <tr>
+                        <td>State:</td>
+                        <td id="edit5"></td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td id="edit6"></td>
+                    </tr>
+                    <tr>
+                        <td>Favorite Stores:</td>
+                        <td id=edit7></td>
+                    </tr>
+                    <tr>
+                        <td>Member Since:</td>
+                        <td id="edit8"></td>
+                    </tr>
+
+                  </table>
+                  <br>
+                  <!-- edit profile bottom  -->
+                  <input type="button" id="editProfile" name ="editprofile" size="10"
+                   value="Edit Profile" onclick="edit();">
+
+              </div>
+
+              <br> <br> <br>
+
+              <div class="marketPlace">
+                <table class="marketPlaceStats" id="marketPlaceStats">
+                    <tr>
+                        <th colspan="2">Market Place Stats</th>
+                    </tr>
+                    <tr>
+                        <td>Deliveries Made:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>User Rating:</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Note:</td>
+                        <td></td>
+                    </tr>
+                  </table>
+                  <br>
+                  <!--
+                  <input type="button" id="marketPlace" name ="marketPlace" size="20"
+                   value="Go To Market Place" onclick="market();">
+                 -->
+                 <button onclick="window.location.href='grocMaketPlace.html'">Go to Market Place</button>
+              </div>
+
+            </aside>
+
+
+        <!-- main content goes here -->
+            <article class ="main">
+           <!--
+                <div class="top_right">
+                    <input type="button" id="profile" name ="profile" size="10"
+                     value="Profile" onclick="click();">
+                    <input type="button" id="recipeFinder" name ="recipeFinder" size="20"
+                     value="Recipe Finder" onclick="click();">
+                    <input type="button" id="marketPlace" name ="marketPlace" size="30"
+                     value="Market Place" onclick="click();">
+
+                </div>
+              -->
+              <!-- I use image to make my Demo wedside -->
+              <img src="mou_caribou.jpeg" alt="Mou_caribou" width="650" height="100">
+
+                <div class="shoppingList">
+                  <table class="myShoppingList" id="myShoppingList">
+                      <tr>
+                          <th colspan="2">My Shopping List</th>
+                      </tr>
+                      <tr>
+                          <td>Apples</td>
+                          <td id="item1"></td>
+                      </tr>
+                      <tr>
+                          <td>Carrots</td>
+                          <td id="item2"></td>
+                      </tr>
+                      <tr>
+                          <td>Celery</td>
+                          <td id=item3></td>
+                      </tr>
+                    </table>
+                    <br>
+                    <!-- edit profile bottom  -->
+                    <form action="#" memthod="get">
+                      <p><input name="favorfood" type="text"
+                        id="favorfood"> <input name="button"
+                        type="button" id="button" value="Add item to list"></p>
+                      </form>
+                      <ul id="list_food">
+                      </ul>
+
+                    <button onclick="window.location.href='grocMaketPlace.html'">Explor to Market Place</button>
+
+                </div>
+                <!-- end my shopping list-->
+
+
+            </article>
+
+
+            <script>
+
+
+            // function edit My profile here
+            function edit() {
+              var edit1 = prompt("Please enter your Name.", "Tommy Lee");
+              var edit2 = prompt("Please enter your Age.", "21");
+              var edit3 = prompt("Please enter your Phone Number.", "(978) 555 7777");
+              var edit4 = prompt("Please enter your location.", "Lowell");
+              var edit5 = prompt("Please enter your State.", "MA");
+              var edit6 = prompt("Please enter your Address.", "24 Read st. Apt1");
+              var edit7 = prompt("Please enter your Favorit Store.", "Market Basket");
+              var edit8 = prompt("Please enter your Member Since.", "2017");
+
+                if (edit1, edit2, edit3, edit4, edit5, edit6, edit7 != null) {
+                    document.getElementById("edit1").innerHTML = edit1;
+                    document.getElementById("edit2").innerHTML = edit2;
+                    document.getElementById("edit3").innerHTML = edit3;
+                    document.getElementById("edit4").innerHTML = edit4;
+                    document.getElementById("edit5").innerHTML = edit5;
+                    document.getElementById("edit6").innerHTML = edit6;
+                    document.getElementById("edit7").innerHTML = edit7;
+                    document.getElementById("edit8").innerHTML = edit8;
+
+                }
+            }// end edit My profile
+
+            // function shopping list
+            function addItems() {
+              var item1 = prompt("Please enter your item.", "carrot");
+              var item2 = prompt("Please enter your item.", "sugar");
+              var item3 = prompt("Please enter your item.", "salt");
+              var item4 = prompt("Please enter your item.", "galic");
+              var item5 = prompt("Please enter your item.", "1 lbs of pepper");
+            //  var item6 = prompt("Please enter your Address.", "24 Read st. Apt1");
+            //  var item7 = prompt("Please enter your Favorit Store.", "Market Basket");
+            //  var item8 = prompt("Please enter your Member Since.", "2017");
+            //  var item9 = prompt("Please enter your Member Since.", "2017");
+
+                if (item1, item2, item3, item4, item5 != null) {
+                    document.getElementById("item1").innerHTML = item1;
+                    document.getElementById("item2").innerHTML = item2;
+                    document.getElementById("item3").innerHTML = item3;
+                    document.getElementById("item4").innerHTML = item4;
+                    document.getElementById("item5").innerHTML = item5;
+                  //  document.getElementById("edit6").innerHTML = edit6;
+                  //  document.getElementById("edit7").innerHTML = edit7;
+                  //  document.getElementById("edit8").innerHTML = edit8;
+
+                }
+            }// end fuction shopping list
+
+            </script>
+
+<script>
+
+</script>
+
+
+    <!-- footer goes here -->
+
+
+        <footer>
+          <p>Copyright 2018</p>
+
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<!--
+  File: grocMarketPlace.html
+  4620 Assignment
+  William Vo, Umass Lowell Computer Science, william_vo@student.uml.edu
+  Copyright (c) 2017 by William Vo. All rights reserved. May be freelly
+      coppied or excerpted for educational purposes with credit to the author.
+  Updated by Will on March 24, 2018 at 11:50 AM
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Grocepi Market Place</title>
+        <!-- Style sheet CSS -->
+        <link href="461f20173.css" type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+          <nav class="clear">
+            <ul>
+              <li><a href="grocipeMain.html">Profile</a></li>
+              <li><a href="listRecipeTool_final.html">Recipe Finder</a></li>
+              <li><a href="grocMaketPlace.html">Market Place</a></li>
+              <li><a href="login.html">LogIn</a></li>
+              <li><a href="signUp.html">SignUp</a></li>
+            </ul>
+          </nav>
+          <h1>Grocepi Market Place</h1>
+        </header>
+        <!-- fist sidebar goes here -->
+            <aside class="sidebar1">
+              <div class="market1">
+                <table class="myMarket1" id="myMarket1">
+                    <tr>
+                        <th colspan="2">Location: Lowell</th>
+                    </tr>
+                    <tr>
+                        <td>Time Posted</td>
+                        <td>2 hours ago</td>
+                    </tr>
+                    <tr>
+                        <td>Nuber of Items:</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Phone number:</td>
+                        <td></td>
+                    </tr>
+
+                  </table>
+                  <input type="button" id="viesList" name ="viewList" size="10"
+                   value="View List" onclick="view();">
+                  <input type="button" id="acceptJob" name ="acceptJob" size="20"
+                   value="Accept Job" onclick="ac_Job();">
+
+                </div>
+                <!-- end market1-->
+                <br> <br>
+                <div class="market1">
+                  <table class="myMarket2" id="myMarket2">
+                      <tr>
+                          <th colspan="2">Location: Lowell</th>
+                      </tr>
+                      <tr>
+                          <td>Time Posted</td>
+                          <td>2 hours ago</td>
+                      </tr>
+                      <tr>
+                          <td>Nuber of Items:</td>
+                          <td>25</td>
+                      </tr>
+                      <tr>
+                          <td>Phone number:</td>
+                          <td></td>
+                      </tr>
+
+                    </table>
+                    <input type="button" id="viesList" name ="viewList" size="10"
+                     value="View List" onclick="view();">
+                    <input type="button" id="acceptJob" name ="acceptJob" size="20"
+                     value="Accept Job" onclick="ac_Job();">
+
+                  </div>
+                  <!-- end marketPlace2 -->
+            </aside>
+
+
+        <!-- main content goes here -->
+            <article class ="main">
+              <!--
+              <div class="top_right">
+                  <input type="button" id="profile" name ="profile" size="10"
+                   value="Profile" onclick="click();">
+                  <input type="button" id="recipeFinder" name ="recipeFinder" size="20"
+                   value="Recipe Finder" onclick="click();">
+                  <input type="button" id="marketPlace" name ="marketPlace" size="30"
+                   value="Market Place" onclick="click();">
+
+              </div>
+            -->
+              <br>
+              <input type="button" id="currentJob" name ="currentJob" size="30"
+               value="My Current Jobs" onclick="job();">
+
+               <br><br>
+
+              <!-- -->
+              <div class="curr_Job">
+                <table class="myCurr_Job" id="myCurr_Job">
+                    <tr>
+                        <th colspan="2">Location: Lowell</th>
+                    </tr>
+                    <tr>
+                        <td>Accept Job:</td>
+                        <td>10 min ago</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Items:</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>Phone number:</td>
+                        <td></td>
+                    </tr>
+                  </table>
+                  <input type="button" id="expand1" name ="expand1" size="10"
+                   value="Expand" onclick="expand();">
+                </div>
+                <!--end accept Job1 -->
+                <br> <br>
+                <div class="curr_Job">
+                  <table class="myCurr_Job" id="myCurr_Job">
+                      <tr>
+                          <th colspan="2">Location: Lowell</th>
+                      </tr>
+                      <tr>
+                          <td>Accept Job:</td>
+                          <td>5 min ago</td>
+                      </tr>
+                      <tr>
+                          <td>Number of Items:</td>
+                          <td>3</td>
+                      </tr>
+                      <tr>
+                          <td>Phone number:</td>
+                          <td></td>
+                      </tr>
+                    </table>
+                    <input type="button" id="expand2" name ="expand2" size="10"
+                     value="Expand" onclick="expand();">
+                  </div>
+                  <!-- end accpt job2 -->
+                  <div class="favor_Market">
+                    <table class="myFav_market" id="myFav_market">
+                        <tr>
+                            <th colspan="2">Favorit Store: Market</th>
+                        </tr>
+                        <tr>
+                            <td>Name:</td>
+                            <td>First Last</td>
+                        </tr>
+                        <tr>
+                            <td>Contact info:</td>
+                            <td>123-5555-777</td>
+                        </tr>
+                        <tr>
+                            <td>Milk</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Cheese</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Bread</td>
+                            <td></td>
+                        </tr>
+                        <br>
+                        <tr>
+                            <td>Note:</td>
+                            <td>Place In Rear of Home.</td>
+                        </tr>
+                      </table>
+
+                    </div>
+                    <!--end favorit Store  -->
+
+
+              </article>
+
+    <!-- footer goes here -->
+
+
+        <footer>
+          <p>Copyright 2018, William</p>
+
+        </footer>
+    </body>
+</html>
